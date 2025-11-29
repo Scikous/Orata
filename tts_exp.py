@@ -1,7 +1,7 @@
 # import sys
 # from pathlib import Path
 
-# # Assuming tts_exp.py is in a directory like 'TTS_Wizard',
+# # Assuming tts_exp.py is in a directory like 'Orata',
 # # and 'Coqui_TTS' is a subdirectory within it.
 # # We need to add the 'Coqui_TTS' directory itself to the Python path.
 # # This allows the library's internal 'from TTS.utils...' imports to work correctly.
@@ -9,8 +9,8 @@
 #     # This determines the path to the directory containing this script.
 #     script_dir = Path(__file__).resolve().parent
 #     # This constructs the path to the Coqui_TTS library directory.
-#     # IMPORTANT: Adjust this if your tts_exp.py is not in the 'TTS_Wizard' parent directory of Coqui_TTS.
-#     # For example, if tts_exp.py is at the project root, this might be: Path('TTS_Wizard/Coqui_TTS')
+#     # IMPORTANT: Adjust this if your tts_exp.py is not in the 'Orata' parent directory of Coqui_TTS.
+#     # For example, if tts_exp.py is at the project root, this might be: Path('Orata/Coqui_TTS')
 #     coqui_tts_path = script_dir / 'Coqui_TTS'
     
 #     if not coqui_tts_path.exists():
@@ -46,7 +46,7 @@ from pydantic import BaseModel
 # We'll adjust the path to make the imports absolute based on the script's location.
 # This assumes a directory structure like:
 # PROJECT_ROOT/
-# ├── TTS_Wizard/
+# ├── Orata/
 # |   ├── tts_exp.py
 # |   └── Coqui_TTS/
 # |   └── utils/
@@ -55,20 +55,20 @@ from pydantic import BaseModel
 # # import sys
 # # Get the directory of the current script (tts_exp.py)
 # script_dir = os.path.dirname(os.path.abspath(__file__))
-# # Get the parent directory (TTS_Wizard)
+# # Get the parent directory (Orata)
 # tts_wizard_dir = os.path.dirname(script_dir)
 # # Add the project root to the Python path to make top-level imports work
 # project_root_dir = os.path.dirname(tts_wizard_dir) # Adjust if your structure is different
 # sys.path.append(project_root_dir)
 
 # Now these should work as top-level imports
-from TTS_Wizard.Coqui_TTS.TTS.utils.manage import ModelManager
-from TTS_Wizard.Coqui_TTS.TTS.tts.configs.xtts_config import XttsConfig
-from TTS_Wizard.Coqui_TTS.TTS.tts.models.xtts import Xtts
+from Orata.Coqui_TTS.TTS.utils.manage import ModelManager
+from Orata.Coqui_TTS.TTS.tts.configs.xtts_config import XttsConfig
+from Orata.Coqui_TTS.TTS.tts.models.xtts import Xtts
 
 # --- Configuration ---
 # You can move these to environment variables or a config file for better practice
-SPEAKER_WAV_PATH = "TTS_Wizard/dataset/inference_testing/vocal_john10.wav.reformatted.wav_10.wav"
+SPEAKER_WAV_PATH = "Orata/dataset/inference_testing/vocal_john10.wav.reformatted.wav_10.wav"
 SERVER_HOST = "0.0.0.0"  # Listen on all network interfaces
 SERVER_PORT = 8002       # Port for the TTS service
 
@@ -196,7 +196,7 @@ if __name__ == "__main__":
 
 
     # import torch
-    # from TTS_Wizard.Coqui_TTS.TTS.api import TTS
+    # from Orata.Coqui_TTS.TTS.api import TTS
 
     # # Get device
     # device = "cuda" if torch.cuda.is_available() else "cpu"

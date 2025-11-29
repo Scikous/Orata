@@ -1,8 +1,8 @@
 import time
 import logging
-from TTS_Wizard.RealtimeTTS.RealtimeTTS.engines import CoquiEngine
-from TTS_Wizard.RealtimeTTS.RealtimeTTS import TextToAudioStream, PiperEngine, PiperVoice
-from TTS_Wizard.utils.tts_base import TTSBase
+from Orata.RealtimeTTS.RealtimeTTS.engines import CoquiEngine
+from Orata.RealtimeTTS.RealtimeTTS import TextToAudioStream, PiperEngine, PiperVoice
+from Orata.utils.tts_base import TTSBase
 from typing import Any, Optional, Callable
 
 class RealTimeTTS(TTSBase):

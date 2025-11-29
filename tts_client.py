@@ -139,8 +139,8 @@ async def send_tts_request(text: str,
 # if __name__ == "__main__":
 #     # Note: To run this test, you need api_v2.py running and aiohttp installed.
 #     # You might also need to adjust the ref_audio_path to something valid for your api_v2.py server.
-#     # Example: python -m TTS_Wizard.GPT_SoVITS.tts_exp (if in the parent directory and paths are set up)
-#     # Or simply: python tts_exp.py (if running from TTS_Wizard/GPT_SoVITS/)
+#     # Example: python -m Orata.GPT_SoVITS.tts_exp (if in the parent directory and paths are set up)
+#     # Or simply: python tts_exp.py (if running from Orata/GPT_SoVITS/)
 #     asyncio.run(main_test())
 
 
